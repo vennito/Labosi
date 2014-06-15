@@ -1,0 +1,272 @@
+/*login */
+body{
+	background-color: #ADD8E6;
+	font-family: Arial, Verdana, Helvetica, sans-serif;
+	font-size: 12px;
+	padding: 0px;
+	padding-top: 10px;
+	margin: 0px auto;
+	width: 960px;
+}
+
+#sadrzaj{
+	margin-top: -10px;
+	height: auto;
+	background-color: #14786D;
+}
+
+#logo{
+	width: 250px;
+	height: 100px;
+	margin-top: 250px;
+	margin-left: 180px;
+}
+
+#slogan{
+	margin-left: 185px;
+	margin-top: -5px;
+	font-weight: bold;
+}
+
+#forma{
+	position: relative;
+	left: 550px;
+	top: -130px;
+}
+
+#forma label{
+	font-weight: bold;
+	font-size: 14px;
+}
+
+#username{
+	margin-top: 5px;
+	margin-bottom: 50px;
+}
+
+#password{
+	margin-top: 5px;
+	margin-bottom: 25px;
+}
+
+#button{
+	font-weight: bold;
+	padding: 5px;
+}
+
+#footer{
+
+	background-color: gray;
+	height: 50px;
+	width: 960px;
+}
+
+#footer p{
+	padding-top: 15px;
+}
+
+/*main */
+
+#header{
+	background-color: #7A0A12;
+	height: 120px;
+}
+
+#header img{
+	width: 200px;
+	height: 100px;
+	margin-top: 10px;
+	margin-left: 10px;
+}
+
+#name{
+	position: relative;
+	left: 700px;
+	top: -80px;
+	font-size: 14px;
+}
+
+#odjava{
+	position: relative;
+	left: 850px;
+	top: -117px;
+	padding: 3px;
+	font-weight: bold;
+}
+
+#navigacija{
+	float: left;
+	width: 200px;
+	height : 610px;
+	background-color: #7A0A12;
+	overflow: hidden;
+}
+
+#lista li{
+	margin: 20px;
+	width: 200px;
+	height: 25px;
+}
+
+#lista a{
+	position: relative;
+	left: -60px;
+	padding: 10px 60px 10px 60px;
+	color: #DE535D;
+	font-weight: bold;
+	font-size: 12px;
+	border:2px solid #88B51E;
+	background: #171717; /* Old browsers */
+	background: -moz-linear-gradient(center top , #171717 0%, #000000 100%) repeat scroll 0 1px #171717; /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#171717), color-stop(100%,#000000)) repeat scroll 0 1px #171717; /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #171717 0%,#000000 100%) repeat scroll 0 1px #171717; /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #171717 0%,#000000 100%) repeat scroll 0 1px #171717; /* Opera11.10+ */
+	background: -ms-linear-gradient(top, #171717 0%,#000000 100%) repeat scroll 0 1px #171717; /* IE10+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#171717', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+	background: linear-gradient(top, #171717 0%,#000000 100%) repeat scroll 0 1px #171717; /* W3C */
+}
+
+#lista a:hover {
+	color: #fff;
+	background: #DE535D; /* Old browsers */
+	background: -moz-linear-gradient(top, #7A0A12 0%, #DE535D 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#48ab53), color-stop(100%,#215026)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #7A0A12 0%,#DE535D 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #7A0A12 0%,#DE535D 100%); /* Opera11.10+ */
+	background: -ms-linear-gradient(top, #7A0A12 0%,#DE535D 100%); /* IE10+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#48ab53', endColorstr='#215026',GradientType=0 ); /* IE6-9 */
+	background: linear-gradient(top, #7A0A12 0%,#DE535D 100%); /* W3C */
+}
+
+#main{
+	float: right;
+	background-color: #DE535D;
+	height: 610px;
+	width: 760px;
+}
+
+#main h2{
+	padding-top: 20px;
+	margin-left: -100px;
+}
+
+#main h3{
+	left: -50px;
+	margin-bottom: 20px;
+}
+
+#main p{
+	margin-top: -10px;
+	margin-bottom: 20px;
+}
+
+#main table{
+	margin: 25px auto;
+	background: #88B51E;
+	border: 3px solid black;
+	border-collapse:collapse;
+	padding:10px;
+	width: 90%
+}
+
+#main table tr, td{
+	border: 3px solid black;
+}
+
+#main table tr:hover{
+	background: white;
+}
+
+#main input{
+	margin: 20px 0px -10px 40px;
+}
+
+#unos{
+	float: right;
+	background-color: #BC1F2A;
+	height: 570px;
+	width: 720px;
+	padding: 20px;
+}
+
+#unos input{
+	padding: 3px;
+	margin-bottom: 10px;
+	margin-top: 5px;
+}
+
+#tegobeinfo, #alergijainfo{
+	visibility:hidden;
+	display:none;
+}
+
+#osobnipodaci, #skolovanje, #iskustvo, #znanje{
+	visibility:hidden;
+	display:none;
+}
+
+#reklama{
+	z-index: 100;
+	position:absolute;
+	left: 0px;
+	top: 0px;
+	background: rgba(100, 100, 100, 0.5);
+	width: 100%;
+	height: 1000px;
+}
+
+#reklamaslika{
+	z-index: 1;
+	position: relative;
+	display: block;
+	width: 500px;
+	height: 250px;
+	margin: 0px auto;
+}
+
+#reklama div{
+	margin: 150px auto;
+	width: 500px;
+	height: 250px;
+}
+
+
+#close{
+	z-index: 2;
+	position: relative;
+	width: 25px;
+	height: 25px;
+	top: -275px;
+	left: 478px;
+}
+
+#trazi{
+	float: right;
+	background-color: #BC1F2A;
+	height: 610px;
+	width: 760px;
+}
+
+#trazi table{
+	margin: 15px auto;
+	background: #88B51E;
+	border: 3px solid black;
+	border-collapse:collapse;
+	padding:10px;
+	width: 90%
+}
+
+#trazi table tr:hover{
+	background: white;
+}
+
+#dalje, #iza{
+	visibility:hidden;
+	display: none;
+}
+
+
+
+
+
+

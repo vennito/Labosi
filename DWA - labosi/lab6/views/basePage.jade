@@ -1,0 +1,115 @@
+      
+!!! 5
+html
+    head
+        meta(http-equiv='content-type', content='text/html; charset=utf-8')
+
+        link(href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css", rel="stylesheet", media="screen")
+        link(href="css/variables.css", rel="stylesheet", media="screen")
+        script(src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js",type="text/javascript")
+        //script(src="js/jquery.js")
+        script(src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js")
+
+        title DWA2013
+    body
+        .navbar.navbar-fixed-top
+            .navbar-inner
+                .container-fluid
+                    a.brand(href = "#") DWA2014
+                    ul.nav
+                        li.active
+                            a(href = "#") Početak
+                        li
+                            a(href = "unos") Unos
+                    p.navbar-text.pull-right
+                        |Dobrodošao
+                        a(href = "#")
+                            =user
+                        a(href = "logout")
+                            button.btn(type="submit", data-toggle="button",style="position:relative; top:-4px") Odspoji me
+
+
+
+        .container-fluid
+            .row-fluid
+                .span12
+                    .hero-unit
+                        h1 Primjer PHP frameworka + ne-HTML templatea + ORM-a 
+                        p Ove stranice u primjer PHP frameworka (Slim framework), neHTML baziranog templatea (Jade), ORM-a (Idiorm) i sve je začinjeno time što se koristi Twitter bootstrap framework za izradu stranica.
+                        p O svim ovim tehnologijama potražite više informacija na stranicama njihovih autora:
+                            ul
+                                li 
+                                    a(href = "http://www.slimframework.com/") Slim framework
+                                li 
+                                    a(href = "http://jade-lang.com/") Jade 
+                                    | (odnosno 
+                                    a(href = "https://github.com/everzet/jade.php/") Jade.php
+                                    | - obavezno pogledati i 
+                                    a(href= "https://github.com/lukegb/jade.php") drugu verziju
+                                    |)
+                                li 
+                                    a(href = "http://j4mie.github.io/idiormandparis/") Idiorm
+                                li 
+                                    a(href = "http://twitter.github.io/bootstrap/‎") Twitter bootstrap
+                                
+                    .row-fluid
+                        //- span4 je CSS klasa definirana u Twitter Bootstrapu, koja će uzeti trećinu širine stranice (stranica je širine 940px, i dijeli se na 12 dijelova. Tri puta po span4 = span12)
+                        
+                        //- Problem nastaje u tome što svaki redak mora imati svoj .rowfluid unutar kojeg su spanovi koji imaju sumu 12.
+                        
+                        //- Kako želimo napraviti foreach i direktno povezati podatke, onda moramo uvesti dodatnu klasu koja popravlja margine ako suma spanova nije 12
+                        
+                        //- ako postoje vijesti, provrti petlju
+                        if vijesti
+                        
+                            //- ovo je PHP blok koji služi za filanje do punih span12
+                            :php
+                                $broj=count($vijesti);
+                            
+                            //- provrti sve vijesti i ispiši ih    
+                            each vijest in vijesti 
+                                .span4
+                                    h2.truncate= $vijest["title"]
+                                    p by
+                                        = $vijest["author"]
+                                        | on 
+                                        = $vijest["date"]
+                                    p
+                                        //- nažalost, Jade nema ugrađenu funkciju za rezanje teksta, pa ovdje PHP-om režemo na 200 znakova
+                                        php:
+                                            $vijestText=truncateString($vijest["text"],200);
+                                        
+                                        = $vijestText
+                                    p
+                                        - $vijestLink = $basePageURL.'news/'.$vijest["id"];
+                                        a.btn(href = $vijestLink) Pogledaj više &raquo;
+                                        
+                        if ($broj%3==1)
+                            .span8
+                                h2 Statični element
+                                p Ovo je statični element kojeg smo stavili kako bi se vidjelo korištenje dvije četvrtine ekrana. Mogli smo i bez njega.
+                        else
+                            if ($broj%3==2)
+                                .span4
+                                    h2 Statični element
+                                    p Ovo je statični element kojeg smo stavili kako bi se vidjelo korištenje četvrtine ekrana. Obrišite jednu vijest pa pogledajte što se dešava. Inače, mogli smo i bez njega.
+                    .row-fluid            
+                        .span1
+                            h2 Mali blok
+                            p Blok širine 1
+                        .span3
+                            h2 Nešto veći blok
+                            p  Blok širine 3, interesantan jer je širina gornjih blokova jednaka 4, a lijevi i ovaj su 1+3 = 4, pa sve ispada lijepo centrirano.
+                        .span8
+                            h2 Velik blok
+                            p Puno veći blok (blok širine 8). Ukupna širina je 1 + 3 + 8 = 12. No ono što je zanimljivo je što se događa ako uvećavate ili smanjujete prozor vašeg pretraživača.
+        hr/
+        footer
+            p.text-center  &copy; TVZ 2014
+            
+          
+    :javascript
+        window.history.forward();
+        
+        
+
